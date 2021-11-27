@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ body{
+     font-family: sans-serif;
+ }
+  .navigation{
+     overflow: hidden;
+      width: 100%;
+      background-color: black;
+  }
+  .navigation a{
+      float: left;
+      text-align: center;
+      padding: 12px 20px;
+      color: white;
+      display: block;
+      text-decoration: none;
+  }
+  section{
+      width: 100%;
+      height: 500px;
+      
+  }
+  .sidebar{
+      width: 100%;
+      display: block;
+      clear: both;
+  }
+.w3-wide,.w3-opacity,.w3-justify{
+    
+    text-align: center;
+    position: relative;
+    top: 300px;
+    left: 60%;
+    padding: 12px;
+    
+    
+}
+  
+  
+.col{
+    float: left;
+    
+   
+    height: 400px;
+    width: 33.3%;   
+}
+ .row{
+   
+   margin-top: 80px;
+   background-color: lightgray;
+ }
+   .col,img{
+     width: 400px;
+     padding: 10px;
+   }
+  .row:after{
+       content: " ";
+       display: table;
+       clear: both;
+  }
+
+.footer{
+    padding: 50px;
+    background-color: black;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+}
+
+</style>
+</head>
+<body>
+<nav class="navigation">
+    <a href="#home" class="link">Home</a>
+    <a href="#band" class="link">Band</a>
+    <a href="#content" class="link">Content</a>
+    <a href="#about" class="link">About</a>
+</nav>
+<section>
+    <img src="img_band_chicago.jpg" class="sidebar">
+    <img src="img_band_la.jpg" class="sidebar">
+    <img src="img_band_ny.jpg" class="sidebar">
+</section>
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+    <h2 class="w3-wide">THE BAND</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">We have created a fictional band website. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmd tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, 
+         sunt in culpa qui officia deserunt mollit anim id est laborum consectetur 
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+  
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("sidebar");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+<div class="row">
+  <div class="col"><img src="img_bandmember.jpg"></div>
+  <div class="col"><img src="img_bandmember.jpg"></div>
+  <div class="col"><img src="img_bandmember.jpg"></div>
+</div>
+
+  <div class="footer">
+      <h1>nikpaswan.com</h1>
+  </div>
+
+</body>
+</html>
